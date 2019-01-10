@@ -1,0 +1,25 @@
+{
+  "name": "code-gig-mongodb",
+  "version": "1.0.0",
+  "description": "job find app for coders",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Debbie Ellis",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
